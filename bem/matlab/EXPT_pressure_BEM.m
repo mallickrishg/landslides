@@ -52,15 +52,15 @@ kernel(index,:) = Ku(index,:);
 kernel(~index,:) = Ku(~index,:);
 
 % if left boundary has flux BC
-% BCvec(2*npts+1:end) = 0; % if this dp/dx = 0 at left boundary
-% kernel(~index,:) = Kflux(~index,:);
+BCvec(~index) = 0; % if this dp/dx = 0 at left boundary
+kernel(~index,:) = Kflux(~index,:);
 
 % solve BEM problem
 phi = kernel\BCvec;
 
 %% compute solution inside the domain
-nxo = 100;
-nzo = 20;
+nxo = 200;
+nzo = nxo/Lx;
 xovec = linspace(1e-6,Lx-1e-6,nxo);
 zovec = linspace(0,1,nzo);
 [xo,zo] = meshgrid(xovec,zovec);
