@@ -7,7 +7,7 @@ import('geometry.*')
 
 % assume landlside properties
 rhog = 1; % landslide density - ρg
-theta = 30; % slope of landslide in degrees
+theta = 40; % slope of landslide in degrees
 
 % construct landslide geometry outline
 npts = 50;
@@ -18,13 +18,19 @@ npts_left = npts/Lx;
 
 % lambert-w function topography
 topovals = cscd(theta) * (1 + lambertw(-exp(-1 + (xpts/Lx-1) * rhog * sind(theta) * tand(theta)))) / rhog + ...
-            0.001*sin(8*pi*xpts/Lx);
+            0.00*sin(8*pi*xpts/Lx);
 ztopo = topovals/max(topovals);
 zleft = linspace(0,1,npts_left+1)';
+% sinusoidal topography for bottom slip surface
+zbottom = -0.1*sin(2*pi*xpts/Lx);
 
 % create outline mesh
-xg = [xpts(1:end-1);flipud(xpts(2:end));zeros(npts_left,1)];
-zg = [ztopo(1:end-1);zeros(npts,1);zleft(1:end-1)];
+xg = [xpts(1:end-1);...
+     flipud(xpts(2:end));...
+     zeros(npts_left,1)];
+zg = [ztopo(1:end-1);...
+     flipud(zbottom(2:end));...
+     zleft(1:end-1)];
 xgp = [xg;0];
 zgp = [zg;1];
 W = sqrt((xgp(1:end-1)-xgp(2:end)).^2 + (zgp(1:end-1)-zgp(2:end)).^2);
