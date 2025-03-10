@@ -10,7 +10,7 @@ rhog = 1; % landslide density - ρg
 theta = 30; % slope of landslide in degrees
 
 % construct landslide geometry outline
-npts = 30;
+npts = 50;
 Lx = 5;
 xpts = linspace(0,Lx,npts+1)';
 % number of points needed to resolve left boundary
@@ -18,7 +18,7 @@ npts_left = npts/Lx;
 
 % lambert-w function topography
 topovals = cscd(theta) * (1 + lambertw(-exp(-1 + (xpts/Lx-1) * rhog * sind(theta) * tand(theta)))) / rhog + ...
-            0.01*sin(4*pi*xpts/Lx);
+            0.00*sin(8*pi*xpts/Lx);
 ztopo = topovals/max(topovals);
 zleft = linspace(0,1,npts_left+1)';
 
@@ -30,10 +30,10 @@ zgp = [zg;1];
 W = sqrt((xgp(1:end-1)-xgp(2:end)).^2 + (zgp(1:end-1)-zgp(2:end)).^2);
 dip = atan2d(-zgp(1:end-1)+zgp(2:end),-xgp(1:end-1)+xgp(2:end));
 % add labels for BC type 
-% 0 - traction BC
-% 1 - velocity BC
+% 0 - velocity BC
+% 1 - traction BC
 % 2 - mixed BC
-labels = [zeros(npts,1);2.*ones(npts,1);ones(npts_left,1)];
+labels = [ones(npts,1);2.*ones(npts,1);zeros(npts_left,1)];
 
 fparams = [labels,xg,zg,W,dip,W];
 eM = geometry.LDhs(1,0.25);% dummy parameters
