@@ -39,8 +39,10 @@ Kdudz = KDu(:,:,2);
 % 1 - traction BC (top boundary)
 % 2 - mixed BC (bottom boundary)
 BCvec = zeros(rcv.N,1);
-index = rcv.BClabel==2 | rcv.BClabel==0; % for bottom & left boundary
-BCvec(index) = -rhog*(rcv.nv(index,1).*sind(theta) - rcv.nv(index,2).*cosd(theta));%*flipud(rcv.xc(rcv.Vpl==0,2));
+index = rcv.BClabel==2; % for bottom boundary
+BCvec(index) = -rhog*(rcv.nv(index,1).*sind(theta) - rcv.nv(index,2).*cosd(theta));
+index = rcv.BClabel==0; % for left boundary
+BCvec(index) = rhog*(rcv.nv(index,1).*sind(theta) - rcv.nv(index,2).*cosd(theta));
 
 % construct flux kernel K = nx * K,x + nz * K,z such that K * φ = q
 nxmat = repmat(rcv.nv(:,1),1,rcv.N);
@@ -48,6 +50,7 @@ nzmat = repmat(rcv.nv(:,2),1,rcv.N);
 Kflux = Kdudx.*nxmat + Kdudz.*nzmat;
 
 % construct kernel - flux and pressure BC
+index = rcv.BClabel~=1;
 kernel = zeros(size(Ku));
 kernel(~index,:) = Ku(~index,:); % pressure BC at top
 kernel(index,:) = Kflux(index,:); %dp/dn BC at bottom
@@ -56,7 +59,7 @@ kernel(index,:) = Kflux(index,:); %dp/dn BC at bottom
 phi = kernel\BCvec;
 
 %% compute solution inside the domain
-nxo = 400;
+nxo = 1000;
 nzo = nxo/Lx;
 xovec = linspace(1e-6,Lx-1e-6,nxo);
 zovec = linspace(0,1,nzo);
@@ -69,7 +72,7 @@ dpdx = KDu_o(:,:,1)*phi;
 dpdz = KDu_o(:,:,2)*phi;
 
 % index points inside landslide
-plotindex = inpolygon(xo,zo,rcv.xc(:,1),rcv.xc(:,2));
+plotindex = inpolygon(xo,zo,rcv.x(:,1),rcv.x(:,2));
 % plot pressure field
 figure(2),clf
 toplot = reshape(p,nzo,nxo);
@@ -87,32 +90,32 @@ xlabel('x'), ylabel('z')
 set(gca,'FontSize',15,'LineWidth',1.5,'TickDir','both')
 
 figure(3),clf
+subplot(2,1,1)
 toplot = reshape(dpdx,nzo,nxo);
 toplot(~plotindex) = nan;
 pcolor(xovec,zovec,toplot), shading interp, hold on
-contour(xovec,zovec,toplot,-1:0.1:1,'k.-','LineWidth',0.1)
+contour(xovec,zovec,toplot,0:0.1:1,'k.-','LineWidth',0.1)
 plotpatch2d(rcv)
 axis tight equal
 cb=colorbar;cb.Location='eastoutside';
 cb.Label.Interpreter='latex';cb.Label.String='$\frac{1}{\rho g}\frac{\partial p}{\partial x}$';
 cb.LineWidth=1;cb.Label.Rotation=0;
-clim([-1,1])
-colormap(bluewhitered(20))
+clim([0,1])
 xlabel('x'), ylabel('z')
 set(gca,'FontSize',15,'LineWidth',1.5,'TickDir','both')
 
-figure(4),clf
+subplot(2,1,2)
 toplot = reshape(dpdz,nzo,nxo);
 toplot(~plotindex) = nan;
 pcolor(xovec,zovec,toplot), shading interp, hold on
-contour(xovec,zovec,toplot,0:0.05:1,'k.-','LineWidth',0.1)
+contour(xovec,zovec,toplot,0:0.1:1,'k.-','LineWidth',0.1)
 plotpatch2d(rcv)
 axis tight equal
 cb=colorbar;cb.Location='eastoutside';
 cb.Label.Interpreter='latex';cb.Label.String='$\frac{1}{\rho g}\frac{\partial p}{\partial z}$';
 cb.LineWidth=1;cb.Label.Rotation=0;
 clim([0,1]*1)
-colormap(parula(20))
+colormap(turbo(10))
 xlabel('x'), ylabel('z')
 set(gca,'FontSize',15,'LineWidth',1.5,'TickDir','both')
 

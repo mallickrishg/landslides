@@ -18,7 +18,7 @@ npts_left = npts/Lx;
 
 % lambert-w function topography
 topovals = cscd(theta) * (1 + lambertw(-exp(-1 + (xpts/Lx-1) * rhog * sind(theta) * tand(theta)))) / rhog + ...
-            0.00*sin(8*pi*xpts/Lx);
+            0.001*sin(8*pi*xpts/Lx);
 ztopo = topovals/max(topovals);
 zleft = linspace(0,1,npts_left+1)';
 
