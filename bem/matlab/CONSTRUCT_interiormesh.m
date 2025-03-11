@@ -22,7 +22,7 @@ topovals = cscd(theta) * (1 + lambertw(-exp(-1 + (xpts/Lx-1) * rhog * sind(theta
 ztopo = topovals/max(topovals);
 zleft = linspace(0,1,npts_left+1)';
 % sinusoidal topography for bottom slip surface
-zbottom = 0.1*sin(1*pi*xpts/Lx);
+zbottom = 0.0*sin(1*pi*xpts/Lx);
 
 % create outline mesh
 xg = [xpts(1:end-1);...
