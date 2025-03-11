@@ -4,6 +4,7 @@ clear
 eM = geometry.LDhs(1,0.25);% dummy parameters
 mesh = geometry.shearZoneReceiver('mesh/geometry',eM);
 load('mesh/rcv.mat','rcv');
+forcedata = importdata('mesh/sol_bodyforce.dat');
 
 % compute kernels
 [Gu,Strain] = compute_disp_stress_kernels_forcevolume(mesh,mesh.xc);
@@ -19,6 +20,7 @@ Guz_r = Strain(:,:,2);
 L = 0.3;
 r = sqrt((mesh.xc(:,1)-0.5).^2 + (mesh.xc(:,2)-0.3).^2);
 phi = exp(-(r.^2)./(2*L^2));
+phi = forcedata(:,3);
 
 figure(11),clf
 subplot(3,1,1)
