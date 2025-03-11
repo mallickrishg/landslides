@@ -11,10 +11,12 @@ addpath functions/
 import('geometry.*')
 % assume landlside properties
 rhog = 1; % landslide density - ρg
-theta = 40;% slop in degrees
+theta = 30;% slop in degrees
 % load landslide geometry from file
 eM = geometry.LDhs(1,0.25);% dummy parameters
 load('mesh/rcv.mat','rcv');
+mesh = geometry.shearZoneReceiver('mesh/geometry',eM);
+
 Lx = 5; % horizontal dimension of landslide
 
 % plot landslide geometry
@@ -44,7 +46,8 @@ BCvec = zeros(rcv.N,1);
 index = rcv.BClabel==2;
 BCvec(index) = -rhog*(rcv.nv(index,1).*sind(theta) - rcv.nv(index,2).*cosd(theta));
 index = rcv.BClabel==0; % for left boundary
-BCvec(index) = 0;
+% BCvec(index) = 0;
+BCvec(index) = -rhog*(rcv.nv(index,1).*sind(theta) - rcv.nv(index,2).*cosd(theta));
 
 % construct flux kernel K = nx * K,x + nz * K,z such that K * φ = q
 nxmat = repmat(rcv.nv(:,1),1,rcv.N);
@@ -61,7 +64,7 @@ kernel(index,:) = Kflux(index,:); %dp/dn BC at bottom
 phi = kernel\BCvec;
 
 %% compute solution inside the domain
-nxo = 1000;
+nxo = 200;
 nzo = nxo/Lx;
 xovec = linspace(1e-6,Lx-1e-6,nxo);
 zovec = linspace(-0.1,1,nzo);
@@ -121,4 +124,50 @@ colormap(turbo(10))
 xlabel('x'), ylabel('z')
 set(gca,'FontSize',15,'LineWidth',1.5,'TickDir','both')
 
+%% compute solution on triangular mesh
+% compute potential field kernel
+[Ku_o,KDu_o] = compute_disp_stress_kernels_force(rcv,mesh.xc);
+% compute pressure in the medium
+p_mesh = Ku_o * phi;
+dpdx_mesh = KDu_o(:,:,1)*phi;
+dpdz_mesh = KDu_o(:,:,2)*phi;
 
+figure(4),clf
+subplot(3,1,1)
+toplot = reshape(p,nzo,nxo);
+toplot(~plotindex) = nan;
+plotshz2d(mesh,p_mesh), hold on, shading flat
+contour(xovec,zovec,toplot,-1:0.1:0,'k-','LineWidth',0.1)
+plotpatch2d(rcv)
+axis tight equal, box on
+cb=colorbar;cb.Location='eastoutside';
+cb.Label.Interpreter='latex';cb.Label.String='$\frac{p}{\rho g}$';
+cb.LineWidth=1;cb.Label.Rotation=0;
+clim([-1,0])
+
+subplot(3,1,2)
+toplot = reshape(dpdx,nzo,nxo);
+toplot(~plotindex) = nan;
+plotshz2d(mesh,dpdx_mesh), hold on, shading flat
+contour(xovec,zovec,toplot,-1:0.1:1,'k.-','LineWidth',0.1)
+plotpatch2d(rcv)
+axis tight equal, box on
+cb=colorbar;cb.Location='eastoutside';
+cb.Label.Interpreter='latex';cb.Label.String='$\frac{1}{\rho g}\frac{\partial p}{\partial x}$';
+cb.LineWidth=1;cb.Label.Rotation=0;
+clim([-1,1])
+
+subplot(3,1,3)
+toplot = reshape(dpdz,nzo,nxo);
+toplot(~plotindex) = nan;
+plotshz2d(mesh,dpdz_mesh), hold on, shading flat
+contour(xovec,zovec,toplot,0:0.1:1,'k.-','LineWidth',0.1)
+plotpatch2d(rcv)
+axis tight equal, box on
+cb=colorbar;cb.Location='eastoutside';
+cb.Label.Interpreter='latex';cb.Label.String='$\frac{1}{\rho g}\frac{\partial p}{\partial z}$';
+cb.LineWidth=1;cb.Label.Rotation=0;
+clim([0,1])
+colormap(parula(1000))
+
+set(findall(gcf, '-property', 'FontSize'), 'FontSize', 20,'Linewidth',1.5)
