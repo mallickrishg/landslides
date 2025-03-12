@@ -1,4 +1,19 @@
 % Construct meshes for landslide problem
+% and store as files that can be read by geometry.receiver()
+% - topography is given by steady-state solution through local stress
+% balance assuming constant yield stress and perturbed by a sinusoid
+% - basal slip surface can have sinusoidal topography as well
+% - labels added for each boundary are as follows:
+% 0 - velocity BC OR dp/dn = 0
+% 1 - traction BC OR p = 0
+% 2 - mixed BC OR dp/dn is prescribed as non-zero
+% 
+% NOTE: the normal vector to the boundary points outward so make sure that
+% all potential field and derivatives are modified accordingly.
+% 
+% AUTHORS:
+% Rishav Mallick, JPL, Caltech 
+% March, 2025
 
 clear
 

@@ -1,7 +1,17 @@
-% script to construct a viscous flow model of a landslide with friction BC
-% this solution is a steady-state solution (static BEM)
+% script to compute the pressure field inside a landslide geometry subject
+% to mixed boundary conditions:
+% (1) at the top we impose p = 0
+% (2) on the left side of the domain dp/dn =  0
+% (3) at the bottom dp/dn = -ρg(nx.sinθ - nz.cosθ)
+% _____________________________________________________________________________________________
+%                                   EXPORT 
+% _____________________________________________________________________________________________
+% pressure at the boundary: p(x,z) 
+% body force vector 
+% fx(x,z) = dp/dx + ρg.sinθ, 
+% fz(x,z) = dp/dz - ρg.cosθ
 % 
-% AUTHORS
+% AUTHORS:
 % Rishav Mallick, JPL, Caltech
 % March 2025
 
