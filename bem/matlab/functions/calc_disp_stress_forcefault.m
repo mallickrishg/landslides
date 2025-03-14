@@ -1,4 +1,4 @@
-function [u,e12,e13] = calc_disp_strain_forcefault(X,Y,a,dip)
+function [u,e12,e13] = calc_disp_stress_forcefault(X,Y,a,dip)
 % the elementary solutions are for a line centered at (0,0) 
 % extending from [-a <= y <= a]
 
