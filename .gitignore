@@ -3,3 +3,6 @@ bem/matlab/EXPT_pressure_BEM.asv
 bem/matlab/mesh/geometry_triangulation.dat
 bem/matlab/mesh/geometry_vertices.dat
 bem/matlab/mesh/rcv.mat
+bem/matlab/mesh/geometry_triangulation.dat
+bem/matlab/mesh/geometry_vertices.dat
+bem/matlab/mesh/rcv.mat
