@@ -68,11 +68,15 @@ U2 = [ux_r(:,2),uy_r(:,2)]*R';
 ux = [U1(:,1),U2(:,1)];
 uy = [U1(:,2),U2(:,2)];
  
-S1_rot = R(1,1)^2 * sxx_r(:,1) + 2 * R(1,1) * R(1,2) * sxx_r(:,1) + R(1,2)^2 * syy_r(:,1);
-S2_rot = R(1,1) * R(2,1) * sxx_r(:,1) + (R(1,1) * R(2,2) + R(1,2) * R(2,1)) * sxy_r(:,1) + R(1,2) * R(2,2) * syy_r(:,1);
-S3_rot = R(2,1)^2 * sxx_r(:,1) + 2 * R(2,1) * R(2,2) * sxy_r(:,1) + R(2,2)^2 * syy_r(:,1);
-sxy = [S2_rot,sxy_r(:,2)];
-sxx = [S1_rot,sxx_r(:,2)];
-syy = [S3_rot,syy_r(:,2)];
+sxy = zeros(length(xo),2);
+sxx = zeros(length(xo),2);
+syy = zeros(length(xo),2);
+parfor i = 1:length(xo)
+    S1 = R*[sxx_r(i,1),sxy_r(i,1);sxy_r(i,1),syy_r(i,1)]*R';
+    S2 = R*[sxx_r(i,2),sxy_r(i,2);sxy_r(i,2),syy_r(i,2)]*R';
+    sxx(i,:) = [S1(1,1),S2(1,1)];
+    sxy(i,:) = [S1(1,2),S2(1,2)];
+    syy(i,:) = [S1(2,2),S2(2,2)];
+end
 
 end
