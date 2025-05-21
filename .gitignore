@@ -7,3 +7,4 @@ bem/matlab/mesh/geometry_triangulation.dat
 bem/matlab/mesh/geometry_vertices.dat
 bem/matlab/mesh/rcv.mat
 *.png
+*.jpg
