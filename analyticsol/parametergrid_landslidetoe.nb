@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    696859,      13998]
-NotebookOptionsPosition[    694646,      13957]
-NotebookOutlinePosition[    695045,      13973]
-CellTagsIndexPosition[    695002,      13970]
+NotebookDataLength[    698488,      14024]
+NotebookOptionsPosition[    696175,      13982]
+NotebookOutlinePosition[    696574,      13998]
+CellTagsIndexPosition[    696531,      13995]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -11338,7 +11338,14 @@ Cell[BoxData[
       RowBox[{"Frame", "->", "True"}], ",", 
       RowBox[{"LabelStyle", "->", 
        RowBox[{"{", 
-        RowBox[{"FontSize", "->", "18"}], "}"}]}]}], "]"}]}]}]}]], "Input",
+        RowBox[{"FontSize", "->", "18"}], "}"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<LandslideToeTrueStabilityBoundaryPlot.jpg\>\""}], ",", "fig", ",", 
+     "\"\<JPEG\>\""}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.957444875325796*^9, 3.9574448755546*^9}, {
    3.957445065574092*^9, 3.9574452532152843`*^9}, {3.957445308430657*^9, 
    3.957445351604189*^9}, {3.9574453895977097`*^9, 3.957445458746982*^9}, {
@@ -11358,8 +11365,8 @@ Cell[BoxData[
    3.9574482840928802`*^9, 3.9574483191498747`*^9}, {3.957448349769391*^9, 
    3.957448373364122*^9}, {3.9574484283835297`*^9, 3.957448470295874*^9}, {
    3.9574485030895233`*^9, 3.957448506131402*^9}, {3.9574485881532373`*^9, 
-   3.957448608929195*^9}},
- CellLabel->"In[41]:=",ExpressionUUID->"02ffeea9-0429-41cc-9c77-eb190ac3c7bd"],
+   3.957448608929195*^9}, {3.9574487285866137`*^9, 3.9574487372265244`*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"02ffeea9-0429-41cc-9c77-eb190ac3c7bd"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -13949,8 +13956,26 @@ AT9WV6RFT/O9aHGbaAGt1sX1D/qFtZFGp0P/BaO4ekM=
    3.957448036807728*^9}, {3.957448095976163*^9, 3.957448111162073*^9}, {
    3.9574481532985497`*^9, 3.957448183297675*^9}, 3.9574482367262087`*^9, 
    3.957448329797876*^9, 3.957448472590768*^9, 3.957448515965907*^9, 
-   3.9574486188128557`*^9},
- CellLabel->"Out[49]=",ExpressionUUID->"019e0b78-f9b2-42da-9617-fe2e41d719ba"]
+   3.9574486188128557`*^9, 3.957448748386367*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"a5e994ef-e3b2-496a-a63c-e13ffe5ef887"],
+
+Cell[BoxData["\<\"/Users/mallick/Documents/GitHub/landslides/analyticsol/\
+LandslideToeTrueStabilityBoundaryPlot.jpg\"\>"], "Output",
+ CellChangeTimes->{{3.9574456757429647`*^9, 3.957445701615877*^9}, 
+   3.957445739495982*^9, {3.957445814896777*^9, 3.957445987935589*^9}, {
+   3.9574460249057083`*^9, 3.957446093762862*^9}, {3.957446167238147*^9, 
+   3.957446265423728*^9}, {3.957446363336916*^9, 3.957446447711011*^9}, {
+   3.9574464865437098`*^9, 3.957446594884425*^9}, 3.957446628630048*^9, 
+   3.95744666098897*^9, {3.9574466944113493`*^9, 3.957446844056324*^9}, {
+   3.957447063101746*^9, 3.9574470965340347`*^9}, {3.9574471805092497`*^9, 
+   3.957447334290168*^9}, 3.9574474919733*^9, 3.957447643692318*^9, {
+   3.9574476836365232`*^9, 3.957447706454524*^9}, {3.957447755288653*^9, 
+   3.957447780145986*^9}, 3.957447833954482*^9, {3.957447888886155*^9, 
+   3.957448036807728*^9}, {3.957448095976163*^9, 3.957448111162073*^9}, {
+   3.9574481532985497`*^9, 3.957448183297675*^9}, 3.9574482367262087`*^9, 
+   3.957448329797876*^9, 3.957448472590768*^9, 3.957448515965907*^9, 
+   3.9574486188128557`*^9, 3.957448748840948*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"baeb5530-9159-4aef-9ac3-37affcd6054b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -13995,8 +14020,9 @@ Cell[568662, 11083, 2082, 28, 34, "Output",ExpressionUUID->"72a99d75-f8a9-425a-a
 Cell[CellGroupData[{
 Cell[570781, 11116, 214, 5, 67, "Section",ExpressionUUID->"c0af0123-07e6-4995-a6c5-a32795e37dc5"],
 Cell[CellGroupData[{
-Cell[571020, 11125, 9606, 236, 619, "Input",ExpressionUUID->"02ffeea9-0429-41cc-9c77-eb190ac3c7bd"],
-Cell[580629, 11363, 113977, 2589, 425, "Output",ExpressionUUID->"019e0b78-f9b2-42da-9617-fe2e41d719ba"]
+Cell[571020, 11125, 9901, 243, 640, "Input",ExpressionUUID->"02ffeea9-0429-41cc-9c77-eb190ac3c7bd"],
+Cell[580924, 11370, 113999, 2589, 402, "Output",ExpressionUUID->"a5e994ef-e3b2-496a-a63c-e13ffe5ef887"],
+Cell[694926, 13961, 1209, 16, 82, "Output",ExpressionUUID->"baeb5530-9159-4aef-9ac3-37affcd6054b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
