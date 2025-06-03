@@ -8,3 +8,4 @@ bem/matlab/mesh/geometry_vertices.dat
 bem/matlab/mesh/rcv.mat
 *.png
 *.jpg
+/analyticsol/Figures
