@@ -9,3 +9,4 @@ bem/matlab/mesh/rcv.mat
 *.png
 *.jpg
 /analyticsol/Figures
+*.xlsx
