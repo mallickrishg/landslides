@@ -82,7 +82,8 @@ processSheet[sheet_] :=
      "qF" -> qF,
      "b0/Lx" -> b0/Lx,
      "\[Alpha]" -> \[Alpha],
-     "\[Alpha]\[Epsilon]"-> \[Alpha]Error
+     "\[Alpha]\[Epsilon]"-> \[Alpha]Error,
+     "Lx"-> Lx
    |>
 ];
 
