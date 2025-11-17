@@ -14,3 +14,4 @@ bem/.DS_Store
 bem/python/.ipynb_checkpoints/*-checkpoint.ipynb
 bem/.DS_Store
 bem/python/__pycache__/*
+bem/python/__pycache__/utilfunctions.cpython-313.pyc
