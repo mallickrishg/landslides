@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    217242,       4349]
-NotebookOptionsPosition[    214459,       4302]
-NotebookOutlinePosition[    214857,       4318]
-CellTagsIndexPosition[    214814,       4315]
+NotebookDataLength[    218061,       4353]
+NotebookOptionsPosition[    215283,       4306]
+NotebookOutlinePosition[    215676,       4322]
+CellTagsIndexPosition[    215633,       4319]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,48 +25,50 @@ Cell["Analytical solutions for simple cases", "Title",
   3.9568403282996473`*^9},ExpressionUUID->"4a4919b1-0c7b-4802-ad65-\
 b6b7f8c4fbac"],
 
-Cell[TextData[{
- "First let us assume ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       SuperscriptBox[
-        StyleBox["b", "TI"], "\[Prime]"], TraditionalForm], "errors" -> {}, 
-     "input" -> "b'", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "06ca9a8b-4d75-4019-9044-fa5e49e7cc9f"],
- "is small i.e., ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"First", " ", "let", " ", "us", " ", "assume", " ", 
+    FormBox[
+     TemplateBox[<|"boxes" -> FormBox[
          SuperscriptBox[
-          RowBox[{"(", 
-            SuperscriptBox[
-             StyleBox["b", "TI"], "\[Prime]"], ")"}], "2"], "\[LessLess]", 
-         "1"}], TraditionalForm], "errors" -> {}, "input" -> "(b')^2 \\ll 1", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "1ff8311c-fb97-4c21-8baa-999b3684d98c"],
- " \nand using geometric series expansion ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         FractionBox["1", 
-          RowBox[{"1", "+", 
-            SuperscriptBox[
-             StyleBox["b", "TI"], "\[Prime]"], "tan", "\[Theta]"}]], 
-         "\[TildeTilde]", "1", "-", 
-         SuperscriptBox[
-          StyleBox["b", "TI"], "\[Prime]"], "tan", "\[Theta]"}], 
-       TraditionalForm], "errors" -> {}, "input" -> 
-     "\\frac{1}{1+b'\\tan\\theta}\\approx 1-b'\\tan\\theta", "state" -> 
-     "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "654ef2d7-1e43-48e4-9357-a9558a710620"],
- ". \nWe also assume that \n",
- Cell[BoxData[
+          StyleBox["b", "TI"], "\[Prime]"], TraditionalForm], "errors" -> {}, 
+       "input" -> "b'", "state" -> "Boxes"|>,
+      "TeXAssistantTemplate"],
+     TraditionalForm], "is", " ", "small", " ", 
+    RowBox[{"i", ".", "e", "."}]}], ",", " ", 
+   FormBox[
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+             SuperscriptBox[
+              StyleBox["b", "TI"], "\[Prime]"], ")"}], "2"], "\[LessLess]", 
+          "1"}], TraditionalForm], "errors" -> {}, "input" -> "(b')^2 \\ll 1",
+       "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"],
+    TraditionalForm]}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+  "and", " ", "using", " ", "geometric", " ", "series", " ", "expansion", " ", 
+   RowBox[{
+    FormBox[
+     TemplateBox[<|"boxes" -> FormBox[
+         RowBox[{
+           FractionBox["1", 
+            RowBox[{"1", "+", 
+              SuperscriptBox[
+               StyleBox["b", "TI"], "\[Prime]"], "tan", "\[Theta]"}]], 
+           "\[TildeTilde]", "1", "-", 
+           SuperscriptBox[
+            StyleBox["b", "TI"], "\[Prime]"], "tan", "\[Theta]"}], 
+         TraditionalForm], "errors" -> {}, "input" -> 
+       "\\frac{1}{1+b'\\tan\\theta}\\approx 1-b'\\tan\\theta", "state" -> 
+       "Boxes"|>,
+      "TeXAssistantTemplate"],
+     TraditionalForm], ".", " ", "\n", "We"}], " ", "also", " ", "assume", " ",
+    "that"}], " "}], "\n", 
+ RowBox[{
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
@@ -81,142 +83,144 @@ Cell[TextData[{
               StyleBox["x", "TI"], "2"], "-", "1"}], ")"}]}], 
        TraditionalForm], "errors" -> {}, "input" -> "b(x) = b_0(x^2 - 1)", 
      "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "b8b1b040-b035-4207-9949-96aa0eb34e16"],
- " \nas a quadratic geometry. Thus the resulting ODE is:\n",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         FractionBox[
-          RowBox[{
-            StyleBox["d", "TI"], 
-            StyleBox["H", "TI"]}], 
-          RowBox[{
-            StyleBox["d", "TI"], 
-            StyleBox["x", "TI"]}]], "+", 
-         RowBox[{"(", 
-           RowBox[{"tan", "\[Theta]", "-", "2", 
+    "TeXAssistantTemplate"],
+   TraditionalForm], " ", 
+  RowBox[{"\[AliasDelimiter]", "\n", 
+   RowBox[{"as", " ", "a", " ", "quadratic", " ", 
+    RowBox[{"geometry", ".", " ", "Thus"}], " ", "the", " ", "resulting", " ",
+     "ODE", " ", 
+    RowBox[{"is", ":", "\n", 
+     RowBox[{
+      FormBox[
+       TemplateBox[<|"boxes" -> FormBox[
+           RowBox[{
+             FractionBox[
+              RowBox[{
+                StyleBox["d", "TI"], 
+                StyleBox["H", "TI"]}], 
+              RowBox[{
+                StyleBox["d", "TI"], 
+                StyleBox["x", "TI"]}]], "+", 
+             RowBox[{"(", 
+               RowBox[{"tan", "\[Theta]", "-", "2", 
+                 SubscriptBox[
+                  StyleBox["b", "TI"], "0"], 
+                 StyleBox["x", "TI"], 
+                 RowBox[{"(", 
+                   RowBox[{"1", "+", 
+                    SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], ")"}], 
+             
+             SubscriptBox[
+              StyleBox["b", "TI"], "0"], "\[CenterDot]", 
+             StyleBox["H", "TI"], "\[LongEqual]", "-", 
+             SubscriptBox[
+              StyleBox["f", "TI"], "\[Lambda]"], "+", "tan", "\[Theta]", "-", 
+             "4", 
              SubscriptBox[
               StyleBox["b", "TI"], "0"], 
              StyleBox["x", "TI"], 
              RowBox[{"(", 
                RowBox[{"1", "+", 
-                 SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], ")"}], 
-         SubscriptBox[
-          StyleBox["b", "TI"], "0"], "\[CenterDot]", 
-         StyleBox["H", "TI"], "\[LongEqual]", "-", 
-         SubscriptBox[
-          StyleBox["f", "TI"], "\[Lambda]"], "+", "tan", "\[Theta]", "-", "4", 
-         SubscriptBox[
-          StyleBox["b", "TI"], "0"], 
-         StyleBox["x", "TI"], 
-         RowBox[{"(", 
-           RowBox[{"1", "+", 
-             SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], 
-       TraditionalForm], "errors" -> {}, "input" -> 
-     "\\boxed{\\frac{dH}{dx} + \\left( \\tan\\theta - 2b_0 x (1 + \
-\\tan^2\\theta) \\right) b_0 \\cdot H = -f_\\lambda + \\tan\\theta - 4b_0 x \
-(1 + \\tan^2\\theta)}", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "16e979d5-d63b-48b0-9fb3-687384d790a0"],
- "\nThe ODE is of the form: ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         FractionBox[
-          RowBox[{
-            StyleBox["d", "TI"], 
-            StyleBox["H", "TI"]}], 
-          RowBox[{
-            StyleBox["d", "TI"], 
-            StyleBox["x", "TI"]}]], "+", 
-         StyleBox["P", "TI"], 
-         RowBox[{"(", 
-           StyleBox["x", "TI"], ")"}], 
-         StyleBox["H", "TI"], "\[LongEqual]", 
-         StyleBox["Q", "TI"], 
-         RowBox[{"(", 
-           StyleBox["x", "TI"], ")"}]}], TraditionalForm], "errors" -> {}, 
-     "input" -> "\\frac{dH}{dx} + P(x) H = Q(x)", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "f71f2641-51ea-4861-acf8-447b4f9e7efe"],
- "\nwhere \n",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["P", "TI"], 
-         RowBox[{"(", 
-           StyleBox["x", "TI"], ")"}], "\[LongEqual]", 
-         SubscriptBox[
-          StyleBox["b", "TI"], "0"], 
-         RowBox[{"(", 
-           RowBox[{"tan", "\[Theta]", "-", "2", 
+                 SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], 
+           TraditionalForm], "errors" -> {}, "input" -> 
+         "\\boxed{\\frac{dH}{dx} + \\left( \\tan\\theta - 2b_0 x (1 + \\tan^2\
+\\theta) \\right) b_0 \\cdot H = -f_\\lambda + \\tan\\theta - 4b_0 x (1 + \
+\\tan^2\\theta)}", "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"],
+       TraditionalForm], "\n", "The", " ", "ODE", " ", "is", " ", "of", " ", 
+      "the", " ", "form"}], ":", " ", 
+     RowBox[{
+      FormBox[
+       TemplateBox[<|"boxes" -> FormBox[
+           RowBox[{
+             FractionBox[
+              RowBox[{
+                StyleBox["d", "TI"], 
+                StyleBox["H", "TI"]}], 
+              RowBox[{
+                StyleBox["d", "TI"], 
+                StyleBox["x", "TI"]}]], "+", 
+             StyleBox["P", "TI"], 
+             RowBox[{"(", 
+               StyleBox["x", "TI"], ")"}], 
+             StyleBox["H", "TI"], "\[LongEqual]", 
+             StyleBox["Q", "TI"], 
+             RowBox[{"(", 
+               StyleBox["x", "TI"], ")"}]}], TraditionalForm], "errors" -> {},
+          "input" -> "\\frac{dH}{dx} + P(x) H = Q(x)", "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"],
+       TraditionalForm], "\n", "where", " ", "\n", 
+      FormBox[
+       TemplateBox[<|"boxes" -> FormBox[
+           RowBox[{
+             StyleBox["P", "TI"], 
+             RowBox[{"(", 
+               StyleBox["x", "TI"], ")"}], "\[LongEqual]", 
              SubscriptBox[
               StyleBox["b", "TI"], "0"], 
-             StyleBox["x", "TI"], 
              RowBox[{"(", 
-               RowBox[{"1", "+", 
-                 SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], ")"}]}], 
-       TraditionalForm], "errors" -> {}, "input" -> 
-     "P(x) = b_0 \\left( \\tan\\theta - 2b_0 x (1 + \\tan^2\\theta) \\right)",
-      "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "111b2f4b-ddba-477c-acac-8492b7334d31"],
- " \n",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["Q", "TI"], 
-         RowBox[{"(", 
-           StyleBox["x", "TI"], ")"}], "\[LongEqual]", "-", 
-         SubscriptBox[
-          StyleBox["f", "TI"], "\[Lambda]"], "+", "tan", "\[Theta]", "-", "4", 
-         SubscriptBox[
-          StyleBox["b", "TI"], "0"], 
-         StyleBox["x", "TI"], 
-         RowBox[{"(", 
-           RowBox[{"1", "+", 
-             SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], 
-       TraditionalForm], "errors" -> {}, "input" -> 
-     "Q(x) = -f_\\lambda + \\tan\\theta - 4b_0 x (1 + \\tan^2\\theta)", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "154de770-3d36-4e2d-929f-8fc8bcef7acb"],
- ".\nThe solution is\n",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["H", "TI"], 
-         RowBox[{"(", 
-           StyleBox["x", "TI"], ")"}], "\[LongEqual]", 
-         FractionBox["1", 
-          RowBox[{"2", 
-            SubscriptBox[
-             StyleBox["b", "TI"], "0"], 
-            SqrtBox[
-             RowBox[{"1", "+", 
-               SuperscriptBox["\[Alpha]", "2"]}]]}]], "\[CenterDot]", 
-         RowBox[{"[", 
-           RowBox[{"4", 
-             SqrtBox[
-              RowBox[{"1", "+", 
-                SuperscriptBox["\[Alpha]", "2"]}]], "\n", "+", "2", 
-             SqrtBox[
-              RowBox[{"1", "+", 
-                SuperscriptBox["\[Alpha]", "2"]}]], "\[CenterDot]", 
-             SuperscriptBox[
-              StyleBox["e", "TI"], 
-              RowBox[{"[", 
-                RowBox[{"-", 
-                  StyleBox["x", "TI"], 
-                  SubscriptBox[
-                   StyleBox["b", "TI"], "0"], "\[Alpha]", 
-                  RowBox[{"(", 
+               RowBox[{"tan", "\[Theta]", "-", "2", 
+                 SubscriptBox[
+                  StyleBox["b", "TI"], "0"], 
+                 StyleBox["x", "TI"], 
+                 RowBox[{"(", 
+                   RowBox[{"1", "+", 
+                    SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], 
+               ")"}]}], TraditionalForm], "errors" -> {}, "input" -> 
+         "P(x) = b_0 \\left( \\tan\\theta - 2b_0 x (1 + \\tan^2\\theta) \
+\\right)", "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"],
+       TraditionalForm], " ", "\n", 
+      RowBox[{
+       FormBox[
+        TemplateBox[<|"boxes" -> FormBox[
+            RowBox[{
+              StyleBox["Q", "TI"], 
+              RowBox[{"(", 
+                StyleBox["x", "TI"], ")"}], "\[LongEqual]", "-", 
+              SubscriptBox[
+               StyleBox["f", "TI"], "\[Lambda]"], "+", "tan", "\[Theta]", "-",
+               "4", 
+              SubscriptBox[
+               StyleBox["b", "TI"], "0"], 
+              StyleBox["x", "TI"], 
+              RowBox[{"(", 
+                RowBox[{"1", "+", 
+                  SuperscriptBox["tan", "2"], "\[Theta]"}], ")"}]}], 
+            TraditionalForm], "errors" -> {}, "input" -> 
+          "Q(x) = -f_\\lambda + \\tan\\theta - 4b_0 x (1 + \\tan^2\\theta)", 
+          "state" -> "Boxes"|>,
+         "TeXAssistantTemplate"],
+        TraditionalForm], ".", "\n", "The"}], " ", "solution", " ", "is", "\n", 
+      FormBox[
+       TemplateBox[<|"boxes" -> FormBox[
+           RowBox[{
+             StyleBox["H", "TI"], 
+             RowBox[{"(", 
+               StyleBox["x", "TI"], ")"}], "\[LongEqual]", 
+             FractionBox["1", 
+              RowBox[{"2", 
+                SubscriptBox[
+                 StyleBox["b", "TI"], "0"], 
+                SqrtBox[
+                 RowBox[{"1", "+", 
+                   SuperscriptBox["\[Alpha]", "2"]}]]}]], "\[CenterDot]", 
+             RowBox[{"[", 
+               RowBox[{"4", 
+                 SqrtBox[
+                  RowBox[{"1", "+", 
+                    SuperscriptBox["\[Alpha]", "2"]}]], "\n", "+", "2", 
+                 SqrtBox[
+                  RowBox[{"1", "+", 
+                    SuperscriptBox["\[Alpha]", "2"]}]], "\[CenterDot]", 
+                 SuperscriptBox[
+                  StyleBox["e", "TI"], 
+                  RowBox[{"[", 
+                    RowBox[{"-", 
+                    StyleBox["x", "TI"], 
+                    SubscriptBox[
+                    StyleBox["b", "TI"], "0"], "\[Alpha]", 
+                    RowBox[{"(", 
                     RowBox[{"1", "-", 
                     StyleBox["x", "TI"], 
                     SubscriptBox[
@@ -224,25 +228,25 @@ Cell[TextData[{
                     FractionBox[
                     RowBox[{"1", "+", 
                     SuperscriptBox["\[Alpha]", "2"]}], "\[Alpha]"]}], ")"}]}],
-                 "]"}]], 
-             RowBox[{"(", 
-               RowBox[{
-                 SubscriptBox[
-                  StyleBox["H", "TI"], "0"], 
-                 SubscriptBox[
-                  StyleBox["b", "TI"], "0"], "-", "2"}], ")"}], "\\[NewLine]",
-              "-", 
-             SuperscriptBox[
-              StyleBox["e", "TI"], 
-              RowBox[{"[", 
-                RowBox[{
-                  FractionBox[
-                   SuperscriptBox["\[Alpha]", "2"], 
-                   RowBox[{"4", "(", 
+                     "]"}]], 
+                 RowBox[{"(", 
+                   RowBox[{
+                    SubscriptBox[
+                    StyleBox["H", "TI"], "0"], 
+                    SubscriptBox[
+                    StyleBox["b", "TI"], "0"], "-", "2"}], ")"}], 
+                 "\\[NewLine]", "-", 
+                 SuperscriptBox[
+                  StyleBox["e", "TI"], 
+                  RowBox[{"[", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["\[Alpha]", "2"], 
+                    RowBox[{"4", "(", 
                     RowBox[{"1", "+", 
                     SuperscriptBox["\[Alpha]", "2"]}], ")"}]], 
-                  SuperscriptBox[
-                   RowBox[{"(", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
                     RowBox[{"1", "-", "2", 
                     StyleBox["x", "TI"], 
                     SubscriptBox[
@@ -250,20 +254,20 @@ Cell[TextData[{
                     FractionBox[
                     RowBox[{"1", "+", 
                     SuperscriptBox["\[Alpha]", "2"]}], "\[Alpha]"]}], ")"}], 
-                   "2"]}], "]"}]], 
-             SqrtBox["\[Pi]"], 
-             RowBox[{"(", 
-               RowBox[{
-                 StyleBox["Erf", FontSlant -> "Plain"], 
+                    "2"]}], "]"}]], 
+                 SqrtBox["\[Pi]"], 
                  RowBox[{"(", 
-                   FractionBox["\[Alpha]", 
+                   RowBox[{
+                    StyleBox["Erf", FontSlant -> "Plain"], 
+                    RowBox[{"(", 
+                    FractionBox["\[Alpha]", 
                     RowBox[{"2", 
                     SqrtBox[
                     RowBox[{"1", "+", 
                     SuperscriptBox["\[Alpha]", "2"]}]]}]], ")"}], "+", 
-                 StyleBox["Erf", FontSlant -> "Plain"], 
-                 RowBox[{"(", 
-                   RowBox[{
+                    StyleBox["Erf", FontSlant -> "Plain"], 
+                    RowBox[{"(", 
+                    RowBox[{
                     FractionBox[
                     RowBox[{"-", "\[Alpha]"}], 
                     RowBox[{"2", 
@@ -277,29 +281,30 @@ Cell[TextData[{
                     FractionBox[
                     RowBox[{"1", "+", 
                     SuperscriptBox["\[Alpha]", "2"]}], "\[Alpha]"]}], ")"}], 
-                   ")"}]}], ")"}], "\[CenterDot]", 
-             RowBox[{"[", 
-               RowBox[{"\[Alpha]", "+", 
-                 StyleBox["f", "TI"], 
-                 RowBox[{"(", 
-                   RowBox[{"1", "-", "\[Lambda]"}], ")"}]}], "]"}]}], "]"}]}],
-        TraditionalForm], "errors" -> {}, "input" -> 
-     "H(x) = \\frac{1}{2b_0\\sqrt{1+\\alpha^2}}\\cdot\\bigg[\n    4 \\sqrt{1 \
-+ \\alpha^2}\\\\\n    + 2\\sqrt{1 + \\alpha^2}\\cdot \n    e^{\\left[-x \
-b_0\\alpha (1 - xb_0\\frac{1 + \\alpha^2}{\\alpha})\\right]} (H_0 b_0 - 2) \\\
-\\\n    - \
+                    ")"}]}], ")"}], "\[CenterDot]", 
+                 RowBox[{"[", 
+                   RowBox[{"\[Alpha]", "+", 
+                    StyleBox["f", "TI"], 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "\[Lambda]"}], ")"}]}], "]"}]}], 
+               "]"}]}], TraditionalForm], "errors" -> {}, "input" -> 
+         "H(x) = \\frac{1}{2b_0\\sqrt{1+\\alpha^2}}\\cdot\\bigg[\n    4 \
+\\sqrt{1 + \\alpha^2}\\\\\n    + 2\\sqrt{1 + \\alpha^2}\\cdot \n    \
+e^{\\left[-x b_0\\alpha (1 - xb_0\\frac{1 + \\alpha^2}{\\alpha})\\right]} \
+(H_0 b_0 - 2) \\\\\n    - \
 e^{\\left[\\frac{\\alpha^2}{4(1+\\alpha^2)}\\left(1-2xb_0\\frac{1+\\alpha^2}{\
 \\alpha}\\right)^2\\right]} \n    \\sqrt{\\pi} \\left( \n    \
 \\mathrm{Erf}\\left(\n    \\frac{\\alpha}{2 \\sqrt{1 + \\alpha^2}} \\right) \n\
     + \\mathrm{Erf}\\left(\\frac{-\\alpha}{2 \\sqrt{1 + \\alpha^2}}\\left(1- \
 2xb_0 \\frac{1 + \\alpha^2}{\\alpha}\\right) \
 \\right)\\right)\\cdot\\left[\\alpha + f(1-\\lambda)\\right]\n    \\bigg]", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "78dad41d-a99b-4689-8fba-812825bc4010"]
-}], "Text",
+         "state" -> "Boxes"|>,
+        "TeXAssistantTemplate"],
+       TraditionalForm]}]}]}]}]}]}], "Text",
  CellChangeTimes->{
-  3.956840338285459*^9},ExpressionUUID->"d1ae620a-f64e-4b55-a6f0-\
+  3.956840338285459*^9, {3.980582006018355*^9, 3.9805820322738943`*^9}, {
+   3.980582075252631*^9, 3.980582079369481*^9}, {3.9805836437051573`*^9, 
+   3.980583668403328*^9}},ExpressionUUID->"d1ae620a-f64e-4b55-a6f0-\
 c4e10bb36e3d"],
 
 Cell[CellGroupData[{
@@ -402,8 +407,7 @@ Cell[BoxData[
    3.9795947867281113`*^9}, 3.9795948254166203`*^9, 3.979594892404709*^9, {
    3.9795951545447397`*^9, 3.979595195584038*^9}, 3.979595250513152*^9, {
    3.979595479493052*^9, 3.979595489270671*^9}},
- CellLabel->
-  "In[175]:=",ExpressionUUID->"40ff7fc7-10b6-477d-8f07-79977c832ea5"],
+ CellLabel->"In[1]:=",ExpressionUUID->"40ff7fc7-10b6-477d-8f07-79977c832ea5"],
 
 Cell[BoxData[
  FractionBox[
@@ -489,9 +493,9 @@ Cell[BoxData[
    3.979594454168*^9}, 3.979594668976667*^9, 3.979594720010211*^9, 
    3.979594789480076*^9, {3.9795948267925158`*^9, 3.979594847902742*^9}, 
    3.9795948934761267`*^9, {3.979595177098514*^9, 3.9795951990496397`*^9}, 
-   3.979595253187056*^9, {3.979595483524619*^9, 3.979595489599934*^9}},
- CellLabel->
-  "Out[179]=",ExpressionUUID->"2d6d8e2d-ecd1-44fa-8cc6-21adcb0ce9e9"],
+   3.979595253187056*^9, {3.979595483524619*^9, 3.979595489599934*^9}, 
+   3.98058204394317*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"98c9d2f5-9b35-42e2-9def-ce6dd51df35e"],
 
 Cell[BoxData[
  RowBox[{"H0", "-", 
@@ -526,9 +530,9 @@ Cell[BoxData[
    3.979594454168*^9}, 3.979594668976667*^9, 3.979594720010211*^9, 
    3.979594789480076*^9, {3.9795948267925158`*^9, 3.979594847902742*^9}, 
    3.9795948934761267`*^9, {3.979595177098514*^9, 3.9795951990496397`*^9}, 
-   3.979595253187056*^9, {3.979595483524619*^9, 3.979595489602523*^9}},
- CellLabel->
-  "Out[180]=",ExpressionUUID->"a4bbf5d1-7b39-4ecb-a961-572f4b04f4dd"]
+   3.979595253187056*^9, {3.979595483524619*^9, 3.979595489599934*^9}, 
+   3.980582044012053*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"f778136e-a348-43fc-a745-9d93ed6758ae"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4301,7 +4305,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1013, 1051},
-WindowMargins->{{Automatic, -3002}, {-72, Automatic}},
+WindowMargins->{{Automatic, 93}, {0, Automatic}},
 FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a6f16e12-9d9e-437e-a1dc-3fb2011b02f8"
@@ -4319,36 +4323,36 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 158, 3, 96, "Title",ExpressionUUID->"4a4919b1-0c7b-4802-ad65-b6b7f8c4fbac"],
-Cell[741, 27, 10651, 275, 435, "Text",ExpressionUUID->"d1ae620a-f64e-4b55-a6f0-c4e10bb36e3d"],
+Cell[741, 27, 11439, 280, 479, "Text",ExpressionUUID->"d1ae620a-f64e-4b55-a6f0-c4e10bb36e3d"],
 Cell[CellGroupData[{
-Cell[11417, 306, 4590, 99, 192, "Input",ExpressionUUID->"40ff7fc7-10b6-477d-8f07-79977c832ea5"],
-Cell[16010, 407, 3048, 86, 82, "Output",ExpressionUUID->"2d6d8e2d-ecd1-44fa-8cc6-21adcb0ce9e9"],
-Cell[19061, 495, 1403, 35, 45, "Output",ExpressionUUID->"a4bbf5d1-7b39-4ecb-a961-572f4b04f4dd"]
+Cell[12205, 311, 4585, 98, 192, "Input",ExpressionUUID->"40ff7fc7-10b6-477d-8f07-79977c832ea5"],
+Cell[16793, 411, 3068, 86, 82, "Output",ExpressionUUID->"98c9d2f5-9b35-42e2-9def-ce6dd51df35e"],
+Cell[19864, 499, 1424, 35, 45, "Output",ExpressionUUID->"f778136e-a348-43fc-a745-9d93ed6758ae"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20501, 535, 7658, 199, 499, "Input",ExpressionUUID->"c2647447-c2dd-4574-8580-cbe9d5848785"],
-Cell[28162, 736, 1116, 20, 26, "Message",ExpressionUUID->"4e884f98-fb85-461c-bd01-afa4f611af9e"],
-Cell[29281, 758, 1109, 21, 26, "Message",ExpressionUUID->"6c452f80-7e37-4354-b9fe-b6ea82295c78"],
-Cell[30393, 781, 1162, 21, 26, "Message",ExpressionUUID->"14dc14e3-3121-4b34-8252-bc76e5a489b2"],
-Cell[31558, 804, 1162, 21, 26, "Message",ExpressionUUID->"fb452964-1426-4baf-a50f-4fd0075220bf"],
-Cell[32723, 827, 1160, 21, 26, "Message",ExpressionUUID->"f387719c-da55-4384-9e46-a5f982a359ec"],
-Cell[33886, 850, 1118, 20, 26, "Message",ExpressionUUID->"dbd4a3c4-6a23-47ac-a669-addd6cd6b13f"],
-Cell[35007, 872, 85972, 1551, 396, "Output",ExpressionUUID->"ac6f8d32-5b06-462f-84c7-1a40232ae202"],
-Cell[120982, 2425, 1160, 21, 26, "Message",ExpressionUUID->"459f8e07-bec1-4820-a6cf-db1a9f2a371c"],
-Cell[122145, 2448, 1158, 21, 26, "Message",ExpressionUUID->"758d97dc-95a4-4a98-abda-8bc2dc30c1b2"],
-Cell[123306, 2471, 1160, 21, 26, "Message",ExpressionUUID->"82925a9a-47d5-4740-bbfc-2efd3647b0d3"],
-Cell[124469, 2494, 1120, 20, 26, "Message",ExpressionUUID->"b6c1d67a-1c23-473e-8987-bb57ec1d8fe1"],
-Cell[125592, 2516, 67932, 1230, 385, "Output",ExpressionUUID->"1882ab99-fe18-478d-b53d-1b5e636eaf7e"],
-Cell[193527, 3748, 942, 13, 77, "Output",ExpressionUUID->"d94dfc9f-e789-4d61-9580-011d91bc728a"]
+Cell[21325, 539, 7658, 199, 499, "Input",ExpressionUUID->"c2647447-c2dd-4574-8580-cbe9d5848785"],
+Cell[28986, 740, 1116, 20, 26, "Message",ExpressionUUID->"4e884f98-fb85-461c-bd01-afa4f611af9e"],
+Cell[30105, 762, 1109, 21, 26, "Message",ExpressionUUID->"6c452f80-7e37-4354-b9fe-b6ea82295c78"],
+Cell[31217, 785, 1162, 21, 26, "Message",ExpressionUUID->"14dc14e3-3121-4b34-8252-bc76e5a489b2"],
+Cell[32382, 808, 1162, 21, 26, "Message",ExpressionUUID->"fb452964-1426-4baf-a50f-4fd0075220bf"],
+Cell[33547, 831, 1160, 21, 26, "Message",ExpressionUUID->"f387719c-da55-4384-9e46-a5f982a359ec"],
+Cell[34710, 854, 1118, 20, 26, "Message",ExpressionUUID->"dbd4a3c4-6a23-47ac-a669-addd6cd6b13f"],
+Cell[35831, 876, 85972, 1551, 396, "Output",ExpressionUUID->"ac6f8d32-5b06-462f-84c7-1a40232ae202"],
+Cell[121806, 2429, 1160, 21, 26, "Message",ExpressionUUID->"459f8e07-bec1-4820-a6cf-db1a9f2a371c"],
+Cell[122969, 2452, 1158, 21, 26, "Message",ExpressionUUID->"758d97dc-95a4-4a98-abda-8bc2dc30c1b2"],
+Cell[124130, 2475, 1160, 21, 26, "Message",ExpressionUUID->"82925a9a-47d5-4740-bbfc-2efd3647b0d3"],
+Cell[125293, 2498, 1120, 20, 26, "Message",ExpressionUUID->"b6c1d67a-1c23-473e-8987-bb57ec1d8fe1"],
+Cell[126416, 2520, 67932, 1230, 385, "Output",ExpressionUUID->"1882ab99-fe18-478d-b53d-1b5e636eaf7e"],
+Cell[194351, 3752, 942, 13, 33, "Output",ExpressionUUID->"d94dfc9f-e789-4d61-9580-011d91bc728a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[194506, 3766, 11000, 300, 360, "Input",ExpressionUUID->"3a60ed60-df3c-4e38-8879-35cf17320186"],
-Cell[205509, 4068, 2288, 60, 71, "Output",ExpressionUUID->"5c48e053-2268-4b5e-aea3-0f071a2fe2b0"],
-Cell[207800, 4130, 3670, 88, 118, "Output",ExpressionUUID->"ab50fe11-eb54-4502-b592-c50afbe37d85"]
+Cell[195330, 3770, 11000, 300, 360, "Input",ExpressionUUID->"3a60ed60-df3c-4e38-8879-35cf17320186"],
+Cell[206333, 4072, 2288, 60, 71, "Output",ExpressionUUID->"5c48e053-2268-4b5e-aea3-0f071a2fe2b0"],
+Cell[208624, 4134, 3670, 88, 118, "Output",ExpressionUUID->"ab50fe11-eb54-4502-b592-c50afbe37d85"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[211507, 4223, 367, 8, 49, "Input",ExpressionUUID->"a2790760-9528-4b0b-9794-5028abfd7ab8"],
-Cell[211877, 4233, 2554, 65, 118, "Output",ExpressionUUID->"8662b5ce-d860-41d0-b6c9-762bd882d5ad"]
+Cell[212331, 4227, 367, 8, 49, "Input",ExpressionUUID->"a2790760-9528-4b0b-9794-5028abfd7ab8"],
+Cell[212701, 4237, 2554, 65, 118, "Output",ExpressionUUID->"8662b5ce-d860-41d0-b6c9-762bd882d5ad"]
 }, Open  ]]
 }, Open  ]]
 }
